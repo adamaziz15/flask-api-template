@@ -6,7 +6,9 @@ backend:
   migration: ["migrate_db.sh"]
   dev: ["python3", "-m", "flask", "run", "--host=0.0.0.0"]
   prod: ["./entrypoint.sh"]
-
+  system:
+    platform_settings:
+      min_scale: 2
 
   resources:
   - name: db1
