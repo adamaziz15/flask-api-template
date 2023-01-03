@@ -43,8 +43,9 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 from models import Message
-db.create_all()
-db.session.commit()
+
+# db.create_all()
+# db.session.commit()
 
 @app.route('/')
 def index():

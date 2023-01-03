@@ -3,8 +3,8 @@ backend:
   index_file_name: index.html
   url_path: /
   repo_path: backend
-  migration: ["migrate_db.sh"]
-  dev: ["python3", "-m", "flask", "run", "--host=0.0.0.0"]
+  migration: ["./migrate_db.sh"]
+  dev: ["python3", "-m", "flask", "run", "--host=0.0.0.0", "--port=$PORT"]
   prod: ["./entrypoint.sh"]
 
 
@@ -14,3 +14,6 @@ backend:
     version: 13
     type: database
 
+  integrations:
+    datadog:
+      enabled: true
