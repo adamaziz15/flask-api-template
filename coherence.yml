@@ -13,7 +13,3 @@ backend:
     engine: postgres
     version: 13
     type: database
-
-  integrations:
-    datadog:
-      enabled: true
